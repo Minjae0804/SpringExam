@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>이름 목록</title>
+</head>
+<body>
+<h2>등록된 이름들</h2>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>이름</th>
+  </tr>
+  <tr th:each="item : ${greetings}">
+    <td th:text="${item.id}"></td>
+    <td th:text="${item.name}"></td>
+  </tr>
+</table>
+<a href="/form">다시 입력하기</a>
+</body>
+</html>
